@@ -1,10 +1,10 @@
 //#region Imports
 
-import './lib/logger';
+import './logger';
 
-import { clone } from './lib/clone';
-import { getCLIParams } from './lib/params';
-import { Logger } from './lib/logger';
+import { clone } from './clone';
+import { getCLIParams } from './params';
+import { Logger } from './logger';
 
 //#endregion
 
