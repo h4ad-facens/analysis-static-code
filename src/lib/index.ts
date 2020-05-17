@@ -4,6 +4,7 @@ import { clone } from './clone';
 import { getCLIParams } from './params';
 import { Logger } from './logger';
 import { getTypescriptFiles } from './list';
+import { getTokenizationResults } from './tokenizer';
 
 //#endregion
 
@@ -16,7 +17,8 @@ export default async function init(): Promise<void> {
     await getCLIParams()
     .then(params => clone(params.repositoryUrl))
     .then(repositoryPath => getTypescriptFiles(repositoryPath))
-    .then(files => logger.log(files))
+    .then(async files => await getTokenizationResults(files))
+    .then(results => logger.log(results))
     .catch(error => logger.error(error));
 }
 
