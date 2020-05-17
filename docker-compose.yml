@@ -14,6 +14,8 @@ services:
     server:
         container_name: faker_server
         build: .
+        volumes:
+            - ./cache:/tmp/analysis-static-code
         ports:
             - "3000:3000"
         environment: 
