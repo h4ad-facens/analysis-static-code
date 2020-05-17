@@ -1,6 +1,7 @@
 //#region Imports
 
 import express from "express";
+import bodyparser from 'body-parser';
 
 import { Logger } from "../lib/logger";
 import { getDatabaseConnection } from "./database";
@@ -14,6 +15,8 @@ import { setupMetricRoutes } from "./controllers/metric.controller";
 const port = process.env.PORT || 3000;
 
 const app = express();
+
+app.use(bodyparser.json());
 
 const logger = new Logger('Express');
 

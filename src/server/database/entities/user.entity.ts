@@ -42,7 +42,7 @@ export class UserEntity {
     /**
      * A lista de métricas desse usuário
      */
-    @OneToMany(() => MetricEntity, u => u.user)
+    @OneToMany(() => MetricEntity, u => u.user, { cascade: true })
     public metrics?: MetricEntity[];
 
     //#endregion

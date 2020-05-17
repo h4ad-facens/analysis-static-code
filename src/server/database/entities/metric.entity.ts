@@ -40,10 +40,34 @@ export class MetricEntity {
     public name!: string;
 
     /**
+     * A descrição dessa métrica
+     */
+    @Column({ nullable: false })
+    public description!: string;
+
+    /**
      * O valor dessa métrica
      */
     @Column({ nullable: false })
-    public value!: number;
+    public result!: number;
+
+    /**
+     * Uma descrição para o resultado fornecido
+     */
+    @Column({ nullable: false })
+    public resultDescription!: string;
+
+    /**
+     * O número de arquivos que bateram com essa regra
+     */
+    @Column({ nullable: false })
+    public filesMatched!: number;
+
+    /**
+     * O número de arquivos processados
+     */
+    @Column({ nullable: false })
+    public processedFiles!: number;
 
     /**
      * A identificação do repositório que foi obtido essas métricas
