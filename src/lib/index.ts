@@ -1,10 +1,9 @@
 //#region Imports
 
-import './logger';
-
 import { clone } from './clone';
 import { getCLIParams } from './params';
 import { Logger } from './logger';
+import { getTypescriptFiles } from './list';
 
 //#endregion
 
@@ -16,7 +15,9 @@ const logger = new Logger('Global');
 export default async function init(): Promise<void> {
     await getCLIParams()
     .then(params => clone(params.repositoryUrl))
-    .catch(logger.error);
+    .then(repositoryPath => getTypescriptFiles(repositoryPath))
+    .then(files => logger.log(files))
+    .catch(error => logger.error(error));
 }
 
 init();
