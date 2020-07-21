@@ -67,7 +67,7 @@
     "@types/nodegit": "^0.26.2",
     "@types/rimraf": "^3.0.0",
     "ava": "2.2.0",
-    "codecov": "^3.5.0",
+    "codecov": "^3.7.1",
     "cz-conventional-changelog": "^2.1.0",
     "gh-pages": "^2.0.1",
     "nodemon": "2.0.3",
