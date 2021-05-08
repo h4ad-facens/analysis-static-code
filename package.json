@@ -57,7 +57,7 @@
     "nodegit": "^0.26.5",
     "rimraf": "^3.0.2",
     "sha.js": "^2.4.11",
-    "typeorm": "^0.2.24"
+    "typeorm": "^0.2.25"
   },
   "devDependencies": {
     "@bitjson/npm-scripts-info": "^1.0.0",
